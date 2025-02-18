@@ -1,4 +1,38 @@
 body {
     background-color: #0C0320;
-    color: white
+    color: white;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+}
+
+.swiper {
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    transition: all 0.3s ease;
+    height: auto;
+}
+
+.swiper-slide-active {
+    z-index: 2;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 24px !important;
+}
+
+.swiper-button-disabled {
+    opacity: 0.35 !important;
 }
