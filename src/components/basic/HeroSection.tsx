@@ -5,9 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 
 // Import Swiper styles
-import "swiper/css"
-import "swiper/css/pagination"
-import "swiper/css/navigation"
+import "swiper/swiper-bundle.css"
 
 interface NFTItem {
     id: number
