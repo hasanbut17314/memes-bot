@@ -22,7 +22,7 @@ export default function NavBar() {
                 <Sheet open={isOpen} onOpenChange={setIsOpen}>
                     <SheetTrigger asChild>
                         <Button variant="ghost" className="lg:hidden" size="icon">
-                            <Menu className="h-14 w-14 text-white" />
+                            <Menu className="text-white size-7" />
                             <span className="sr-only">Toggle menu</span>
                         </Button>
                     </SheetTrigger>
@@ -74,7 +74,7 @@ export default function NavBar() {
                 </div>
 
                 <div>
-                    <h3 className="sm:text-2xl text-xl font-semibold text-primary">GovernX</h3>
+                    <h3 className="text-2xl sm:text-3xl font-semibold text-primary">GovernX</h3>
                 </div>
 
                 {/* Auth buttons */}
