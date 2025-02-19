@@ -27,42 +27,42 @@ interface NFTItem {
 const nftItems: NFTItem[] = [
     {
         id: 1,
-        image: "/placeholder.svg?height=400&width=300",
+        image: `https://picsum.photos/id/${Math.floor(Math.random() * 1000)}/400/300`,
         name: "Space Pug",
         currentBid: { eth: 8.25, usd: 10646.25 },
         timeLeft: { hours: 4, minutes: 25, seconds: 20 },
     },
     {
         id: 2,
-        image: "/placeholder.svg?height=400&width=300",
+        image: `https://picsum.photos/id/${Math.floor(Math.random() * 1000)}/400/300`,
         name: "Money Penguin",
         currentBid: { eth: 12.5, usd: 16125.75 },
         timeLeft: { hours: 2, minutes: 15, seconds: 45 },
     },
     {
         id: 3,
-        image: "/placeholder.svg?height=400&width=300",
+        image: `https://picsum.photos/id/${Math.floor(Math.random() * 1000)}/400/300`,
         name: "Bored Ape",
         currentBid: { eth: 15.75, usd: 20325.5 },
         timeLeft: { hours: 6, minutes: 30, seconds: 0 },
     },
     {
         id: 4,
-        image: "/placeholder.svg?height=400&width=300",
+        image: `https://picsum.photos/id/${Math.floor(Math.random() * 1000)}/400/300`,
         name: "Cool Penguin",
         currentBid: { eth: 5.5, usd: 7097.5 },
         timeLeft: { hours: 1, minutes: 45, seconds: 30 },
     },
     {
         id: 5,
-        image: "/placeholder.svg?height=400&width=300",
+        image: `https://picsum.photos/id/${Math.floor(Math.random() * 1000)}/400/300`,
         name: "Bitcoin Bird",
         currentBid: { eth: 9.99, usd: 12897.08 },
         timeLeft: { hours: 3, minutes: 20, seconds: 15 },
     },
     {
         id: 6,
-        image: "/placeholder.svg?height=400&width=300",
+        image: `https://picsum.photos/id/${Math.floor(Math.random() * 1000)}/400/300`,
         name: "Rich Penguin",
         currentBid: { eth: 7.35, usd: 9486.75 },
         timeLeft: { hours: 5, minutes: 55, seconds: 40 },
@@ -105,12 +105,12 @@ export default function HeroSection() {
                             <div className="h-3 w-3 rounded-full bg-[#bcc5d0]" />
                             <div className="h-3 w-3 rounded-full bg-[#bcc5d0]" />
                         </div>
-                        <span className="text-2xl font-bold">125M+</span>
+                        <span className="sm:text-2xl text-lg font-bold">125M+</span>
                         <span className="text-sm text-[#a876ff]">Tech</span>
                     </div>
                     <Badge className="bg-[#542fb6] text-white">Infinite Possibilities</Badge>
                     <div className="text-right">
-                        <span className="text-2xl font-bold">60M+</span>
+                        <span className="sm:text-2xl text-lg font-bold">60M+</span>
                         <span className="ml-2">Artworks</span>
                     </div>
                 </div>
@@ -129,12 +129,12 @@ export default function HeroSection() {
                 </div>
 
                 {/* Carousel */}
-                <div className="mb-12 overflow-hidden">
+                <div className="mb-16 overflow-hidden">
                     <Swiper
                         initialSlide={2}
                         centeredSlides={true}
                         slidesPerView={1.5}
-                        spaceBetween={20}
+                        spaceBetween={14}
                         navigation={{
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
@@ -150,7 +150,7 @@ export default function HeroSection() {
                             },
                         }}
                         modules={[Navigation, Pagination]}
-                        className="!overflow-visible !px-12"
+                        className="!overflow-visible !px-10 !z-20"
                         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
                     >
                         {nftItems.map((item, index) => (
@@ -158,13 +158,13 @@ export default function HeroSection() {
                                 <div
                                     className={cn(
                                         "transition-all duration-300",
-                                        index === activeIndex ? "scale-125" : "scale-75 opacity-50",
+                                        index === activeIndex ? "scale-100" : index === activeIndex + 1 || index === activeIndex - 1 ? "translate-y-10 scale-75 opacity-50" : "scale-50 opacity-50 translate-y-20",
                                     )}
                                 >
                                     <div
                                         className={cn(
                                             "relative aspect-[3/4] overflow-hidden rounded-3xl border-4",
-                                            index === activeIndex ? "border-[#a876ff]" : "border-[#35323d]",
+                                            index === activeIndex ? "border-8 border-[#542fb6]" : "border-[#35323d]",
                                         )}
                                     >
                                         <img
@@ -182,7 +182,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Bid Info */}
-                <div className="mx-auto flex max-w-2xl flex-col items-center justify-between gap-4 rounded-2xl bg-[#542fb6]/20 p-4 sm:flex-row sm:p-6">
+                <div className="mx-auto flex max-w-2xl flex-col items-center justify-between gap-4 rounded-2xl bg-[#542fb6]/30 p-4 sm:flex-row sm:p-6 relative z-10 bidInfo">
                     <div>
                         <h3 className="text-center text-sm font-medium text-[#bcc5d0] sm:text-left">Current Bid</h3>
                         <div className="mt-1 text-center sm:text-left">

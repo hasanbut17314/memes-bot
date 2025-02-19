@@ -36,3 +36,24 @@ body {
 .swiper-button-disabled {
     opacity: 0.35 !important;
 }
+
+.bidInfo::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 107px;
+    height: 186px;
+    width: 13px;
+    background: #542fb6;
+    border-radius: 20px 20px 0 0;
+    left: 50%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+@media (width <=639px) {
+    .bidInfo::before {
+        bottom: 164px;
+        height: 100px;
+    }
+}
