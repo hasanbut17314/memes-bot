@@ -74,7 +74,7 @@ export default function NavBar() {
                 </div>
 
                 <div>
-                    <h3 className="text-2xl sm:text-3xl font-semibold text-primary">GovernX</h3>
+                    <h3 className="text-2xl sm:text-3xl font-semibold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">GovernX</h3>
                 </div>
 
                 {/* Auth buttons */}

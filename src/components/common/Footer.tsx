@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import bg from '/bg.png'
 
 const navigation = [
     { name: "Home", href: "/" },
@@ -14,7 +15,7 @@ const navigation = [
 
 export default function Footer() {
     return (
-        <div className="">
+        <div className="relative">
             {/* Main Contact Section */}
             <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
                 <div className="grid gap-12 lg:grid-cols-2">
@@ -114,6 +115,9 @@ export default function Footer() {
                     </Button>
                 </div>
             </footer>
+            <div className="absolute right-0 bottom-0 scale-[-1] z-[-1]">
+                <img src={bg} alt="" className="opacity-85" />
+            </div>
         </div>
     )
 }

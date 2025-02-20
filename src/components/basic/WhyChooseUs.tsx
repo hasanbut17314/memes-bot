@@ -1,6 +1,8 @@
+import bg from '/bg.png'
+
 export default function WhyChooseUs() {
     return (
-        <section className="text-white px-4 pb-16 pt-9">
+        <section className="text-white px-4 pb-16 pt-9 relative">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="space-y-4 mb-16">
@@ -37,6 +39,9 @@ export default function WhyChooseUs() {
                         </p>
                     </div>
                 </div>
+            </div>
+            <div className='absolute top-0 left-0 z-[-1] -translate-y-1/3'>
+                <img src={bg} alt="" className='opacity-70' />
             </div>
         </section>
     )

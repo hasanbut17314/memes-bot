@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination } from "swiper/modules"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
+import bg from '/bg.png'
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css"
@@ -208,6 +209,12 @@ export default function HeroSection() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="absolute top-0 z-[-1]">
+                <img src={bg} alt="" />
+            </div>
+            <div className="absolute top-0 right-0 scale-[-1] z-[-1] -translate-y-1/3">
+                <img src={bg} alt="" />
             </div>
         </div>
     )
